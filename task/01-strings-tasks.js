@@ -22,7 +22,8 @@
  *   '',  'bb'  => 'bb'
  */
 function concatenateStrings(value1, value2) {
-    throw new Error('Not implemented');
+    return value1 + value2;
+    // throw new Error('Not implemented');
 }
 
 
@@ -38,7 +39,8 @@ function concatenateStrings(value1, value2) {
  *   ''      => 0
  */
 function getStringLength(value) {
-    throw new Error('Not implemented');
+    return value.length;
+    // throw new Error('Not implemented');
 }
 
 /**
@@ -55,7 +57,8 @@ function getStringLength(value) {
  *   'Chuck','Norris'  => 'Hello, Chuck Norris!'
  */
 function getStringFromTemplate(firstName, lastName) {
-    throw new Error('Not implemented');
+    return 'Hello, ' + firstName + ' ' + lastName + '!';
+    // throw new Error('Not implemented');
 }
 
 /**
@@ -69,7 +72,11 @@ function getStringFromTemplate(firstName, lastName) {
  *   'Hello, Chuck Norris!' => 'Chuck Norris'
  */
 function extractNameFromTemplate(value) {
-    throw new Error('Not implemented');
+    let arr = value.split('');
+    let deleted =  arr.splice(0, 7);
+    let deleted2 = arr.splice(-1, 1);
+    return arr.join('');
+    // throw new Error('Not implemented');
 }
 
 
@@ -98,8 +105,20 @@ function getFirstChar(value) {
  *   'cat'              => 'cat'
  *   '\tHello, World! ' => 'Hello, World!'
  */
+// function removeLeadingAndTrailingWhitespaces(value) {
+//     value = value.replace(/^[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '');
+//     value = value.trim();
+//     return value;
+// }
+
 function removeLeadingAndTrailingWhitespaces(value) {
-    throw new Error('Not implemented');
+    if (value.startsWith(' ') || value.startsWith('\t')) {
+        value = value.slice(1);
+        value = value.trim();
+        return value;
+    } else {
+        return value;
+    }
 }
 
 /**

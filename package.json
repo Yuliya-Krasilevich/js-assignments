@@ -3,7 +3,7 @@
   "version": "0.9.1",
   "description": "JS training tasks",
   "scripts": {
-    "test": "./node_modules/.bin/mocha",
+    "test": "mocha",
     "test-debug": "./node_modules/.bin/mocha --debug-brk"
   },
   "author": "aorgish",
@@ -11,8 +11,13 @@
   "devDependencies": {
     "mocha": "^2.3.4"
   },
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/rolling-scopes-school/js-assignments.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rolling-scopes-school/js-assignments.git"
+  },
+  "dependencies": {
+    "@types/minimatch": "^5.1.2",
+    "@types/mkdirp": "^1.0.2",
+    "@types/pug": "^2.0.6"
   }
 }
