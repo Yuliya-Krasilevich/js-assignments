@@ -6,7 +6,7 @@
  * https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions           *
  *                                                                                          *
  ********************************************************************************************/
-
+//  npm test ./test/05-regex-tests.js
 
 /**
  * Returns the regexp that matches a GUID string representation
@@ -31,7 +31,7 @@
  * @return {RegExp}
  */
 function getRegexForGuid() {
-   throw new Error('Not implemented');
+   return new RegExp("{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}}");
 }
 
 
@@ -53,7 +53,7 @@ function getRegexForGuid() {
  *
  */
 function getRegexForPitSpot() {
-   throw new Error('Not implemented');
+   return new RegExp("pi|sp|sl|re");
 }
 
 
@@ -72,7 +72,7 @@ function getRegexForPitSpot() {
  * @return {RegExp}
  */
 function getRegexForIPv4() {
-   throw new Error('Not implemented');
+   return new RegExp("^(2[0-5][0-5]|[1-2][0-4][0-9]|[0-1]?[0-9]{1,2})\.(2[0-5][0-5]|[1-2][0-4][0-9]|[0-1]?[0-9]{1,2})\.(2[0-5][0-5]|[1-2][0-4][0-9]|[0-1]?[0-9]{1,2})\.(2[0-5][0-5]|[1-2][0-4][0-9]|[0-1]?[0-9]{1,2})$");
 }
 
 
@@ -91,7 +91,7 @@ function getRegexForIPv4() {
  * @return {RegExp}
  */
 function getRegexForSSN() {
-   throw new Error('Not implemented');
+   return new RegExp("([0-9][1-9][1-9])\-([0-9][1-9])\-([0-9][0-9][0-9][1-9])");
 }
 
 
@@ -117,6 +117,7 @@ function getRegexForSSN() {
  */
 function getPasswordValidator(minLength) {
    throw new Error('Not implemented');
+   // return new RegExp("^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{13,}$")
 }
 
 

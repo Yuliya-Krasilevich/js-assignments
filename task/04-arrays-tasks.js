@@ -23,7 +23,10 @@
  *    [0, 1, 2, 3, 4, 5], 5    => 5
  */
 function findElement(arr, value) {
-   throw new Error('Not implemented');
+   for (let item of arr) {
+      return item.findIndex(value)
+   }
+   
 }
 
 /**

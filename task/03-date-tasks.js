@@ -7,7 +7,7 @@
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date    *
  *                                                                                          *
  ********************************************************************************************/
-
+//  npm test ./test/03-date-tests.js
 
 /**
  * Parses a rfc2822 string date representation into date value
@@ -22,7 +22,7 @@
  *    'Sun, 17 May 1998 03:00:00 GMT+01' => Date()
  */
 function parseDataFromRfc2822(value) {
-   throw new Error('Not implemented');
+   return new Date(value);
 }
 
 /**
@@ -37,7 +37,7 @@ function parseDataFromRfc2822(value) {
  *    '2016-01-19T08:07:37Z' => Date()
  */
 function parseDataFromIso8601(value) {
-   throw new Error('Not implemented');
+   return new Date(value);
 }
 
 
@@ -56,7 +56,15 @@ function parseDataFromIso8601(value) {
  *    Date(2015,1,1)    => false
  */
 function isLeapYear(date) {
-   throw new Error('Not implemented');
+   let year = date.getFullYear();
+   let leapDate = new Date (year, 2, 0);
+   if ((year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)) {
+      if (leapDate.getDate() == 29) {
+         return true;
+      }
+   } else {
+      return false;
+   }
 }
 
 

@@ -23,7 +23,6 @@
  */
 function concatenateStrings(value1, value2) {
     return value1 + value2;
-    // throw new Error('Not implemented');
 }
 
 
@@ -40,7 +39,6 @@ function concatenateStrings(value1, value2) {
  */
 function getStringLength(value) {
     return value.length;
-    // throw new Error('Not implemented');
 }
 
 /**
@@ -58,7 +56,6 @@ function getStringLength(value) {
  */
 function getStringFromTemplate(firstName, lastName) {
     return 'Hello, ' + firstName + ' ' + lastName + '!';
-    // throw new Error('Not implemented');
 }
 
 /**
@@ -76,7 +73,6 @@ function extractNameFromTemplate(value) {
     let deleted =  arr.splice(0, 7);
     let deleted2 = arr.splice(-1, 1);
     return arr.join('');
-    // throw new Error('Not implemented');
 }
 
 
@@ -133,7 +129,11 @@ function removeLeadingAndTrailingWhitespaces(value) {
  *   'cat', 3 => 'catcatcat'
  */
 function repeatString(value, count) {
-    throw new Error('Not implemented');
+    let str = '';
+    for (let i = 0; i < count; i++){
+        str += value;
+    }
+    return str;
 }
 
 /**
