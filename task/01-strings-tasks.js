@@ -7,7 +7,7 @@
  *                                                                                          *
  ********************************************************************************************/
 
-
+// npm test ./test/01-strings-tests.js
 
 /**
  * Returns the result of concatenation of two strings.
@@ -149,7 +149,7 @@ function repeatString(value, count) {
  *   'ABABAB','BA' => 'ABAB'
  */
 function removeFirstOccurrences(str, value) {
-    throw new Error('Not implemented');
+    return str.replace(value, '');
 }
 
 /**
@@ -164,7 +164,7 @@ function removeFirstOccurrences(str, value) {
  *   '<a>' => 'a'
  */
 function unbracketTag(str) {
-    throw new Error('Not implemented');
+    return str.slice(1,-1);
 }
 
 
