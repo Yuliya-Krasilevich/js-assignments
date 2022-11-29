@@ -8,7 +8,7 @@
  * NOTE : Please do not use loops! All tasks can be implmeneted using standard Array methods *
  *                                                                                           *
  *********************************************************************************************/
-
+// npm test ./test/04-arrays-tests.js
  
 /**
  * Returns an index of the specified element in array or -1 if element is not found
@@ -23,10 +23,7 @@
  *    [0, 1, 2, 3, 4, 5], 5    => 5
  */
 function findElement(arr, value) {
-   for (let item of arr) {
-      return item.findIndex(value)
-   }
-   
+   return arr.indexOf(value);
 }
 
 /**
@@ -41,7 +38,10 @@ function findElement(arr, value) {
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
 function generateOdds(len) {
-   throw new Error('Not implemented');
+   const n = len * 2;
+   let arr = Array.from({ length: n }, (_, i) => i++);
+   const result = arr.filter(item => !(item % 2 === 0));
+   return result;
 }
 
 
@@ -57,7 +57,7 @@ function generateOdds(len) {
  *    [] => [] 
  */
 function doubleArray(arr) {
-   throw new Error('Not implemented');
+   return arr.concat(arr);
 }
 
 
@@ -73,7 +73,8 @@ function doubleArray(arr) {
  *    [] => [] 
  */
 function getArrayOfPositives(arr) {
-   throw new Error('Not implemented');
+   const result = arr.filter((item) => item > 0);
+   return result;
 }
 
 /**
@@ -88,7 +89,8 @@ function getArrayOfPositives(arr) {
  *    [ 'cat, 'dog', 'raccon' ] => [ 'cat', 'dog', 'racoon' ]
  */
 function getArrayOfStrings(arr) {
-   throw new Error('Not implemented');
+   const result = arr.filter(item => typeof(item) === 'string');
+   return result;
 }
 
 /**
@@ -105,7 +107,8 @@ function getArrayOfStrings(arr) {
  *    [ false, 0, NaN, '', undefined ]   => [ ]
  */
 function removeFalsyValues(arr) {
-   throw new Error('Not implemented');
+   const result = arr.filter(item => Boolean(item) === true);
+   return result;
 }
 
 /**
@@ -119,7 +122,8 @@ function removeFalsyValues(arr) {
  *    [ 'a', 'b', 'c', 'd', 'e', 'f', 'g' ]  => [ 'A', 'B', 'C', 'D', 'E', 'F', 'G' ]
  */
 function getUpperCaseStrings(arr) {
-   throw new Error('Not implemented');
+   const result = arr.map(item => item.toUpperCase());
+   return result;
 }
 
 
@@ -163,7 +167,8 @@ function insertItem(arr, item, index) {
  *    [ 'a', 'b', 'c', 'd'], 3  => [ 'a', 'b', 'c' ]
  */
 function getHead(arr, n) {
-   throw new Error('Not implemented');
+   const result = arr.splice(0, n);
+   return result;
 }
 
 
@@ -178,7 +183,8 @@ function getHead(arr, n) {
  *    [ 'a', 'b', 'c', 'd'], 3  => [ 'b', 'c', 'd' ]
  */
 function getTail(arr, n) {
-   throw new Error('Not implemented');
+   const result = arr.reverse();
+   return result.splice(0, n).reverse();
 }
 
 
@@ -356,7 +362,8 @@ function getItemsSum(arr) {
  *  [ null, undefined, NaN, false, 0, '' ]  => 6
  */
 function getFalsyValuesCount(arr) {
-   throw new Error('Not implemented');
+   const falseValues = arr.filter(item => Boolean(item) === false);
+   return falseValues.length;
 }
 
 /**
@@ -472,7 +479,9 @@ function getIntervalArray(start, end) {
  *   [ 1, 1, 2, 2, 3, 3, 4, 4] => [ 1, 2, 3, 4]
  */
 function distinct(arr) {
-   throw new Error('Not implemented');
+   const unique = new Set([...arr]);
+   const result = [...unique];
+   return result; 
 }
 
 /**
